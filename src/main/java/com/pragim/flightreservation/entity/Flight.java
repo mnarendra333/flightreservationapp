@@ -3,6 +3,7 @@ package com.pragim.flightreservation.entity;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 @Entity
@@ -12,12 +13,12 @@ public class Flight {
 	private int id;
 	private String flightNumber;
 	private String operatingAirlines;
-
+	@Column(name="DEPARTURE_CITY")
 	private String depatureCity;
 	private String arrivalCity;
-
+	@Column(name="DATE_OF_DEPARTURE")
 	private Date dateOfDepature;
-
+	@Column(name="ESTIMATED_DEPARTURE_TIME")
 	private Timestamp estimatedDepatureTime;
 
 	public int getId() {

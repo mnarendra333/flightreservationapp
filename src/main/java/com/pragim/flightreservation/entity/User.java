@@ -2,7 +2,9 @@ package com.pragim.flightreservation.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -10,6 +12,8 @@ import javax.persistence.Table;
 public class User {
 
 	@Id
+	@SequenceGenerator(name = "User_Gen", sequenceName = "user_info_seq")
+	@GeneratedValue(generator = "User_Gen")
 	private int id;
 
 	@Column(name = "FIRST_NAME")
