@@ -7,4 +7,6 @@ import com.pragim.flightreservation.entity.Passenger;
 @Repository
 public interface PassengerRepository extends JpaRepository<Passenger, Integer> {
 
+	Passenger findByEmail(String email);
+
 }

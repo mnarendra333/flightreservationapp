@@ -4,13 +4,19 @@ import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="reservation")
 public class Reseravation {
 
 	@Id
+	@SequenceGenerator(name = "Res_Gen", sequenceName = "res_seq")
+	@GeneratedValue(generator = "Res_Gen")
 	private int id;
 	
 	@Column(name="CHECKED_IN")

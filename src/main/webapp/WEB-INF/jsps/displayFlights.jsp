@@ -20,7 +20,7 @@
 				<td>${flight.arrivalCity}</td>
 				<td>${flight.dateOfDepature}</td>
 				<td>${flight.estimatedDepatureTime}</td>
-				<td><a href="confirmBooking?fid=${flight.id}">book</a></td>
+				<td><a href="${pageContext.request.contextPath}/flight/showConfirmPage?fid=${flight.id}">book</a></td>
 			
 			</tr>
 		

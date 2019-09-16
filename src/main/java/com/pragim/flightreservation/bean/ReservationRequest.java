@@ -1,17 +1,8 @@
-package com.pragim.flightreservation.entity;
+package com.pragim.flightreservation.bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import java.util.Date;
 
-@Entity
-public class Passenger {
-	@Id
-	@SequenceGenerator(name = "Passe_Gen", sequenceName = "passenger_seq")
-	@GeneratedValue(generator = "Passe_Gen")
-	private int id;
+public class ReservationRequest {
 
 	private String firstName;
 
@@ -21,15 +12,24 @@ public class Passenger {
 
 	private String email;
 
-	@Column(name="phone")
 	private String mobileNo;
 
-	public int getId() {
-		return id;
+	private long cardNo;
+
+	private Date expDate;
+
+	private int cvv;
+
+	private String name;
+
+	private String fid;
+
+	public String getFid() {
+		return fid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setFid(String fid) {
+		this.fid = fid;
 	}
 
 	public String getFirstName() {
@@ -70,6 +70,38 @@ public class Passenger {
 
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
+	}
+
+	public long getCardNo() {
+		return cardNo;
+	}
+
+	public void setCardNo(long cardNo) {
+		this.cardNo = cardNo;
+	}
+
+	public Date getExpDate() {
+		return expDate;
+	}
+
+	public void setExpDate(Date expDate) {
+		this.expDate = expDate;
+	}
+
+	public int getCvv() {
+		return cvv;
+	}
+
+	public void setCvv(int cvv) {
+		this.cvv = cvv;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

@@ -9,7 +9,7 @@
 <body>
 
 
-	<form action="/user/register" method="post">
+	<form action="${pageContext.request.contextPath}/user/register" method="post">
 	
 		<pre>
 		
